@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
+
+#test {
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;;
+    background: url("https://www.nass.usda.gov/Publications/AgCensus/images/us_map_pr.gif") no-repeat fixed center center;
+    font-family: 'Indie Flower', cursive;
+}
+
+.card {
+    position: relative;
+}
+
+.card, .card-front, .card-back {
+    width: 90px;
+    height: 90px;
+    line-height: 60px;
+    margin: 10px;
+    text-align: center;
+}
+
+.card-front, .card-back {
+    border-radius: 4px;
+    background-color: #81a2ff;
+    position: absolute;
+    top: 0;
+    left: 0;
+    backface-visibility: hidden;
+    overflow: hidden;
+    transition: transform .8s ease;
+}
+
+.card-back {
+    transform: rotateY(180deg);
+    background-color: greenyellow;
+}
+.card:hover .card-front {
+    transform: rotateY(-180deg);
+}
+
+.card:hover .card-back {
+    transform: rotateY(0deg);
+}
+
+#title {
+    text-align: center;
+}
+
+#cards-container {
+    display: grid;
+    grid-template-rows: auto auto auto;
+    grid-template-columns: 120px 120px 120px;
+    justify-items: center;
+    justify-content: center;
+}
